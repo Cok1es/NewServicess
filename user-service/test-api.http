@@ -1,0 +1,40 @@
+### Создать первого пользователя
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Ivans Ivanovs",
+  "email": "ivans@example.com",
+  "age": 23
+}
+
+### Создать второго пользователя
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Maria Smith",
+  "email": "maria@example.com",
+  "age": 22
+}
+### Обновить пользователя (замените 1 на реальный ID из базы)
+PUT http://localhost:8080/api/users/1
+Content-Type: application/json
+
+{
+  "name": "Ivan Updated",
+  "email": "ivan_new@example.com",
+  "age": 26
+}
+
+### Удалить пользователя
+DELETE http://localhost:8080/api/users/17
+
+### Тест прямой отправки почты в notification-service
+POST http://localhost:8081/api/notifications/send
+Content-Type: application/json
+
+{
+  "email": "pechenka1321@gmail.com",
+  "operation": "CREATE"
+}
