@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.4'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:2023.0.0")
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-reactor-resilience4j'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

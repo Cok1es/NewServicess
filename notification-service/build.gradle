@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.4'
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation platform("org.springframework.cloud:spring-cloud-dependencies:2023.0.0")
+
+    implementation 'org.springframework.kafka:spring-kafka:3.1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-mail:3.2.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.2.4'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
+    implementation 'org.springframework:spring-tx:6.1.5'
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:3.2.4'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    compileOnly 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
